@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:baselineAligned="false"
+    android:focusable="false"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/mx"
+            android:textColor="#1c1919"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textFirm"
+            android:layout_toEndOf="@+id/textFirm"
+            android:textSize="20dp"
+            android:layout_weight="0.75"
+            android:text="@string/mx" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/firm"
+            android:textColor="#1c1919"
+            android:layout_alignParentTop="true"
+            android:paddingRight="5dp"
+            android:textSize="20dp"
+            android:layout_weight="0.60"
+            android:text="@string/firm"
+            android:focusable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/name"
+            android:id="@+id/name"
+            android:textColor="#1c1919"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/role"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="20dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/cameraPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="76dp"
+        android:layout_gravity="center_horizontal|top"
+        android:focusable="false">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="164dp"
+            android:layout_height="fill_parent"
+            android:ems="10"
+            android:id="@+id/ScanText"
+            android:layout_gravity="left|top"
+            android:inputType="numberSigned"
+            android:gravity="center_vertical|left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="+"
+            android:id="@+id/roleact"
+            android:layout_gravity="center"
+            android:gravity="top|center"
+            android:textStyle="bold"
+            android:layout_weight="0.2" />
+
+        <Button
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/CfcButton"
+            android:foregroundGravity="right"
+            android:focusable="true"
+            android:text="@string/cfc"
+            android:layout_weight="0.22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="X"
+            android:id="@+id/XtextView"
+            android:layout_weight="0.2"
+            android:gravity="center|center_vertical"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="fill_parent"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/qty"
+            android:gravity="center_vertical|start"
+            android:layout_weight="0.45"
+            android:textStyle="bold"
+            android:hint="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:id="@+id/prodname"
+            android:hint="@string/prodname"
+            android:textSize="24dp"
+            android:text="@string/prodname" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan"
+            android:id="@+id/ScanButton"
+            android:layout_gravity="left|bottom"
+            android:layout_weight="0.33"
+            android:focusable="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select"
+            android:id="@+id/SelectButton"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_weight="0.33" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:id="@+id/SaveButton"
+            android:layout_gravity="right|bottom"
+            android:layout_weight="0.33" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кол"
+            android:id="@+id/QTYView"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:id="@+id/spaceView"
+            android:layout_weight="0.52" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Наименование"
+            android:id="@+id/TovarView"
+            android:textSize="20dp"
+            android:layout_weight="0.11"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/list"
+        tools:listitem="@android:layout/simple_list_item_2"
+        tools:listheader="@layout/list"
+        android:longClickable="false"
+        android:nestedScrollingEnabled="false" />
+</LinearLayout>

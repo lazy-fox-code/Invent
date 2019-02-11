@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Переучёт</string>
+    <string name="firm">Фирма</string>
+    <string name="mx">Место</string>
+    <string name="name">Фамилия И.О.</string>
+    <string name="ip">Сеть</string>
+    <string name="save">Запись</string>
+    <string name="scan">Скан</string>
+    <string name="qty">Кол</string>
+    <string name="select">Запрос</string>
+    <string name="cfc">Ед.</string>
+    <string name="prodname">Товар</string>
+    <string name="roles">Роль</string>
+    <string name="action_settings">Настройки</string>
+    <string name="no">Нет</string>
+    <string name="ok">Да</string>
+</resources>
