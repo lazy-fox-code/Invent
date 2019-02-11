@@ -1,0 +1,142 @@
+.subheader
+{
+	font-size: 9px;
+   background-color: #7D7D7D;
+	border-bottom: 2px solid white;
+}
+
+.mainmenu
+{
+	background-image: url('menu2.gif');
+	background-repeat: repeat-x;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: white;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+
+a.active 
+{
+	text-decoration: underline;
+}
+
+a.noactive 
+{
+	text-decoration: none;
+}
+
+
+a.noactive:hover
+{
+	text-decoration: underline;
+}
+
+
+.mainmenu a
+ {
+	background-image: url('menu2.gif');
+	background-repeat: repeat-x;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: white;
+	font-variant: small-caps;
+	font-weight: bold;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+
+.spacer20
+{
+	font-size: 20px;
+}
+
+h1
+{
+ padding-left: 0;
+ padding-right: 0;
+ padding-bottom: 0px;
+ padding-top: 15px;
+ color: #006448; font-family: Arial, Helvetica, sans-serif;
+ font-size: 18pt;
+ font-weight: normal;
+}
+
+.contenttd
+{
+	padding-left: 45px;
+	padding-right: 15px;
+	border-left: 1px solid #EF7D24;
+}
+
+.contenttd p, .contenttd li, .contenttd ul
+{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ text-align: justify;
+}
+
+.news
+{
+ padding-left: 15px;
+ padding-right: 10px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ text-align: justify;
+ color: white;
+}
+
+.news a
+{
+	color: white;
+}
+
+.hh
+{
+ font-size: 20px; 	
+}
+
+.cpr
+{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ color: #006448;
+}
+
+.cpr a
+{
+	color: #006448;
+}
+
+.hotline2
+{
+color: #EF7D24;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 26px;
+}
+
+.hotline
+{
+color: #ff0000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 26px;
+}
+
+.nslogan
+{
+color: #006448;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+
+
+.nslogan2 a
+{
+color: #006448;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+}
