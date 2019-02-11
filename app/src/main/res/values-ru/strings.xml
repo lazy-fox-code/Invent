@@ -15,6 +15,4 @@
     <string name="action_settings">Настройки</string>
     <string name="no">Нет</string>
     <string name="ok">Да</string>
-    <string name="webserver">Сервер</string>
-    <string name="items">Значение</string>
 </resources>
