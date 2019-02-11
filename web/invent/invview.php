@@ -1,4 +1,4 @@
-<?php 
+п»ї<?php 
 session_start();
 $fdates[] .= '';
 if ($_SESSION['config']['fdates']) $fdates = array_merge ($fdates, $_SESSION['config']['fdates']);
@@ -13,7 +13,7 @@ $fmx[] .= '';
 if ($_SESSION['config']['fmx']) $fmx = array_merge ($fmx, $_SESSION['config']['fmx']);
 $mx = ("{$_REQUEST['mx']}");
 $smx = ($mx!="" ? "AND (INVENT.MX  = '$mx')" : "");	
-$tmxarr = Array ("В","Ш","П","Х","C"); 
+$tmxarr = Array ("Р’","РЁ","Рџ","РҐ","C"); 
 
 $fnames[] .= '';
 if ($_SESSION['config']['fnames']) $fnames = array_merge ($fnames, $_SESSION['config']['fnames']);
@@ -113,26 +113,26 @@ $_SESSION['config']['froles'] = $froles;
 ?>
 <html>
 <head>
-	<title>Справочная служба - Журнал инвентаризации товара</title>
+	<title>РЎРїСЂР°РІРѕС‡РЅР°СЏ СЃР»СѓР¶Р±Р° - Р–СѓСЂРЅР°Р» РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё С‚РѕРІР°СЂР°</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 	<link rel="STYLESHEET" type="text/css" href="mainpage.css">
 	<script src="sorttable.js" type="text/javascript"></script>
 	<style type="text/css">
 
 		A 	{
-			text-decoration: none; // Убирает подчеркивание для ссылок 
-			color: blue; // Ссылка синего цвета 
+			text-decoration: none; // РЈР±РёСЂР°РµС‚ РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РґР»СЏ СЃСЃС‹Р»РѕРє 
+			color: blue; // РЎСЃС‹Р»РєР° СЃРёРЅРµРіРѕ С†РІРµС‚Р° 
 		}
 		A:visited { text-decoration: none; }
 		A:hover {
-			text-decoration: underline; // Добавляем подчеркивание при наведении курсора на ссылку 
-			color: blue; // Ссылка синего цвета 
+			text-decoration: underline; // Р”РѕР±Р°РІР»СЏРµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё РєСѓСЂСЃРѕСЂР° РЅР° СЃСЃС‹Р»РєСѓ 
+			color: blue; // РЎСЃС‹Р»РєР° СЃРёРЅРµРіРѕ С†РІРµС‚Р° 
 		}
 	</style>
 </head>
 
 <?php
-//Далее выводим итоговую таблицу:
+//Р”Р°Р»РµРµ РІС‹РІРѕРґРёРј РёС‚РѕРіРѕРІСѓСЋ С‚Р°Р±Р»РёС†Сѓ:
 echo "<table class = 'sortable' border='1' cellpadding='5'>";
 echo '<form action="invview.php" method="get">';
 	echo "<thead>";
@@ -144,7 +144,7 @@ echo '<form action="invview.php" method="get">';
 				foreach($dfirm as $fkeys => $frm) {
 					if ($fkeys == $firm) $selected = 'selected';
 					else $selected = '';
-					$frm = ($fkeys == '' ? 'Фирма' : $frm);
+					$frm = ($fkeys == '' ? 'Р¤РёСЂРјР°' : $frm);
 					echo '<option value="'.$fkeys.'" '.$selected.'> '.$frm.'</option>';
 				}
 		echo "</font></select></th>";
@@ -153,11 +153,11 @@ echo '<form action="invview.php" method="get">';
 			foreach($fdates as $fd) {
 					if ($fd == $dates) $selected = 'selected';
 					else $selected = '';
-					$fds = ($fd == '' ? 'Дата' : $fd);
+					$fds = ($fd == '' ? 'Р”Р°С‚Р°' : $fd);
 					echo '<option value="'.$fd.'" '.$selected.'> '.$fds.'</option>';
 				}
 		echo "</font></select></th>";
-		echo "<th style='border:1px solid black;' ><font size='-1'>Время</font></th>";
+		echo "<th style='border:1px solid black;' ><font size='-1'>Р’СЂРµРјСЏ</font></th>";
 		echo '<th style="border:1px solid black;" ><font size="-1">';
 			echo '<select name="roles" size="1">';
 				foreach($froles as $fr) {
@@ -182,23 +182,23 @@ echo '<form action="invview.php" method="get">';
 					echo '<option value="'.$mxn.'" '.$selected.'> '.$tmxarr[(substr($mxn, 0, 1))-1].substr($mxn, 1, 2).'</option>';
 				}
 		echo "</font></select></th>";		
-		//echo "<th style='border:1px solid black;' ><font size='-1'>Штрихкод</font></th>";
+		//echo "<th style='border:1px solid black;' ><font size='-1'>РЁС‚СЂРёС…РєРѕРґ</font></th>";
 		echo "<th style='border:1px solid black;' ><font size='-1'>";
-			echo '<a href="invview.php"> <img src="f.png" alt="Ошибка" border="0" title="Отменить фильтр"></a>';
+			echo '<a href="invview.php"> <img src="f.png" alt="РћС€РёР±РєР°" border="0" title="РћС‚РјРµРЅРёС‚СЊ С„РёР»СЊС‚СЂ"></a>';
 		echo "</font></th>";
 		echo "<th style='border:1px solid black;' ><font size='-1'>";
-		echo '<a href="invent.php?firm='.$firm.'&dates='.$dates.'&filtr=1" title="Развернуть">Факт</a>';	 						
+		echo '<a href="invent.php?firm='.$firm.'&dates='.$dates.'&filtr=1" title="Р Р°Р·РІРµСЂРЅСѓС‚СЊ">Р¤Р°РєС‚</a>';	 						
 		echo "</font></th>";
-		echo "<th style='border:1px solid black;' ><font size='-1'>Наименование_фактически_записанного_операторами_товара_в_ведомость</font></th>";
+		echo "<th style='border:1px solid black;' ><font size='-1'>РќР°РёРјРµРЅРѕРІР°РЅРёРµ_С„Р°РєС‚РёС‡РµСЃРєРё_Р·Р°РїРёСЃР°РЅРЅРѕРіРѕ_РѕРїРµСЂР°С‚РѕСЂР°РјРё_С‚РѕРІР°СЂР°_РІ_РІРµРґРѕРјРѕСЃС‚СЊ</font></th>";
 	echo "</thead></form>";
 	echo "<tbody>";
 	if ($result){
 		foreach ($result as $key => $row) {
 			echo "<tr>";
-					if('3' == $result[$key]['VALID']) $cellt = '<img src="3.gif" alt="Не считали" border="0" title="Продажи до учёта">';
-					if('2' == $result[$key]['VALID']) $cellt = '<img src="0.gif" alt="Ошибка" border="0" title="Проверить">';
-					if('1' == $result[$key]['VALID']) $cellt = '<img src="1.gif" alt="Готово" border="0" title="Отменить">';
-					if('0' == $result[$key]['VALID']) $cellt = '<img src="2.gif" alt="Проверка" border="0" title="Установить">';
+					if('3' == $result[$key]['VALID']) $cellt = '<img src="3.gif" alt="РќРµ СЃС‡РёС‚Р°Р»Рё" border="0" title="РџСЂРѕРґР°Р¶Рё РґРѕ СѓС‡С‘С‚Р°">';
+					if('2' == $result[$key]['VALID']) $cellt = '<img src="0.gif" alt="РћС€РёР±РєР°" border="0" title="РџСЂРѕРІРµСЂРёС‚СЊ">';
+					if('1' == $result[$key]['VALID']) $cellt = '<img src="1.gif" alt="Р“РѕС‚РѕРІРѕ" border="0" title="РћС‚РјРµРЅРёС‚СЊ">';
+					if('0' == $result[$key]['VALID']) $cellt = '<img src="2.gif" alt="РџСЂРѕРІРµСЂРєР°" border="0" title="РЈСЃС‚Р°РЅРѕРІРёС‚СЊ">';
 				echo "<td>".$result[$key]['N']."</td>";
 				echo "<td>".$result[$key]['FIRM']."</td>";
 				echo "<td>".$result[$key]['DATES']."</td>";
@@ -209,7 +209,7 @@ echo '<form action="invview.php" method="get">';
 					if ($result[$key]['ID']) echo '<td><a href="inverr.php?firm='.$firm.'&id='.$result[$key]['ID'].'&dates='.$dates.'">'.$cellt."</a></td>";
 					else echo "<td>".$cellt."</a></td>";
 				//echo "<td>".$result[$key]['BARCODE']."</td>";
-				echo '<td><a href="invview.php?firm='.$firm.'&dates='.$dates.'&prodname='.$result[$key]['PRODNAME'].'" title="уп: '.($result[$key]['CFC']).' * кол: '.($result[$key]['QTY']).'">'.($result[$key]['QTY']*$result[$key]['CFC']).'</a></td>';
+				echo '<td><a href="invview.php?firm='.$firm.'&dates='.$dates.'&prodname='.$result[$key]['PRODNAME'].'" title="СѓРї: '.($result[$key]['CFC']).' * РєРѕР»: '.($result[$key]['QTY']).'">'.($result[$key]['QTY']*$result[$key]['CFC']).'</a></td>';
 				echo "<td>".$result[$key]['PRODNAME']."</td>";
 			echo "</tr>";
 		}
